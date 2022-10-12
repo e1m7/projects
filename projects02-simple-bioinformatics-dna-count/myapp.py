@@ -1,7 +1,7 @@
 
 import streamlit as st
 import pandas as pd
-import altar as alt
+import altair as alt
 from PIL import Image
 
 st.write("""
