@@ -64,7 +64,7 @@ with b1:
 with b2:
     st.subheader('4. Print as Bar chart')
     p = alt.Chart(df).mark_bar().encode(x='nucleotide', y='count')
-    p = p.properties(width=alt.Step(80))
+    p = p.properties(width=alt.Step(40))
     st.write(p)
 
 
