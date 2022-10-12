@@ -2,7 +2,6 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
-from PIL import Image
 
 st.write("""
 # DNA Nucleotide Count Web App
