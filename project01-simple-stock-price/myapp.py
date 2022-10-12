@@ -7,6 +7,8 @@ st.write("""
 # Simple Stock Price App
 
 Show are the stock closing **price** and ***volume*** of Google!
+
+***
 """)
 
 tickerSymbol = "GOOGL"
