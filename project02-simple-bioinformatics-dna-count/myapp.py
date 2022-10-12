@@ -38,7 +38,6 @@ def DNA_nucleotide_count(seq):
         ('C', seq.count('C'))
     ])
 
-
 with a1:
     st.subheader('1. Print as dictionary')
     X = DNA_nucleotide_count(sequence)
@@ -47,22 +46,25 @@ with a1:
 # X_label = list(X)
 # X_values = list(X.X_values())
 
-st.subheader('2. Print as text')
-st.write('There are ' + str(X['A']) + ' adenine (A)')
-st.write('There are ' + str(X['T']) + ' thymine (T)')
-st.write('There are ' + str(X['G']) + ' guanine (G)')
-st.write('There are ' + str(X['C']) + ' cytosine (C)')
+with a2:
+    st.subheader('2. Print as text')
+    st.write('There are ' + str(X['A']) + ' adenine (A)')
+    st.write('There are ' + str(X['T']) + ' thymine (T)')
+    st.write('There are ' + str(X['G']) + ' guanine (G)')
+    st.write('There are ' + str(X['C']) + ' cytosine (C)')
 
-st.subheader('3. Print as DataFrame')
-df = pd.DataFrame.from_dict(X, orient='index')
-df = df.rename({0:'count'}, axis='columns')
-df.reset_index(inplace=True)
-df = df.rename(columns = {'index':'nucleotide'})
-st.write(df)
+with b1:
+    st.subheader('3. Print as DataFrame')
+    df = pd.DataFrame.from_dict(X, orient='index')
+    df = df.rename({0:'count'}, axis='columns')
+    df.reset_index(inplace=True)
+    df = df.rename(columns = {'index':'nucleotide'})
+    st.write(df)
 
-st.subheader('4. Print as Bar chart')
-p = alt.Chart(df).mark_bar().encode(x='nucleotide', y='count')
-p = p.properties(width=alt.Step(80))
-st.write(p)
+with b2:
+    st.subheader('4. Print as Bar chart')
+    p = alt.Chart(df).mark_bar().encode(x='nucleotide', y='count')
+    p = p.properties(width=alt.Step(80))
+    st.write(p)
 
 
