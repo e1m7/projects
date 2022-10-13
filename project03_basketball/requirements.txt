@@ -1,4 +1,6 @@
 streamlit==1.5.0
-urllib
-bs4
 pandas
+base64
+matplotlib
+seaborn
+numpy
