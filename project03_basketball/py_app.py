@@ -27,6 +27,7 @@ def load_data(year):
     return playerstats
 
 playerstats = load_data(selected_year)
+del playerstats['FG%']
 
 # Sidebar - Team selection
 sorted_unique_team = sorted(playerstats.Tm.unique())
