@@ -31,7 +31,7 @@ def load_data(year):
 
 # Получить данные за выбранный год
 playerstats = load_data(selected_year)
-playerstats
+# playerstats
 
 # # Вывести список команд (по алфавиту) и позволить выбирать их
 # sorted_unique_team = sorted(playerstats.Tm.unique())
@@ -42,11 +42,11 @@ playerstats
 # selected_pos = st.sidebar.multiselect('Position', unique_pos, unique_pos)
 
 # # Фильтруем данные
-# df_selected_team = playerstats[(playerstats.Tm.isin(selected_team)) & (playerstats.Pos.isin(selected_pos))]
+df_selected_team = playerstats[(playerstats.Tm.isin(selected_team)) & (playerstats.Pos.isin(selected_pos))]
 
-# st.header('Display Player Stats of Selected Team')
-# st.write('Data Dimension: ' + str(df_selected_team.shape[0]) + ' rows and ' + str(df_selected_team.shape[1]) + ' columns')
-# st.dataframe(df_selected_team)
+st.header('Display Player Stats of Selected Team')
+st.write('Data Dimension: ' + str(df_selected_team.shape[0]) + ' rows and ' + str(df_selected_team.shape[1]) + ' columns')
+st.dataframe(df_selected_team)
 
 
 
