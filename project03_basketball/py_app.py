@@ -28,4 +28,4 @@ def load_data(year):
 
 playerstats = load_data(selected_year)
 
-st.write(playerstats)
+st.dataframe(playerstats)
