@@ -17,6 +17,7 @@ This app retrieves the list of the **S&P 500** (from Wikipedia) and its correspo
 
 st.sidebar.header('User Input Features')
 
+# Функция загрузки данных со страницы википедии
 @st.cache
 def load_data():
     url = 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
@@ -30,6 +31,7 @@ sector = df.groupby('GICS Sector')
 sorted_sector_unique = sorted(df['GICS Sector'].unique())
 selected_sector = st.sidebar.multiselect('Sector', sorted_sector_unique, sorted_sector_unique)
 
+# Выбираем данные относительно колонки 'GICS Sector'
 df_selected_sector = df[(df['GICS Sector'].isin(selected_sector))]
 
 st.header('Display Companies in Selected Sector')
@@ -44,15 +46,16 @@ def filedownload(df):
 
 st.markdown(filedownload(df_selected_sector), unsafe_allow_html=True)
 
+# Выбираем данные по открытие/закрытие для компаний
 data = yf.download(
-    tickers = list(df_selected_sector[:10].Symbol),
-    period = "ytd",
-    interval = "1d",
-    group_by = 'ticker',
-    auto_adjust = True,
-    prepost = True,
-    threads = True,
-    proxy = None
+    tickers = list(df_selected_sector[:10].Symbol), # 
+    period = "ytd",                                 # период = год
+    interval = "1d",                                # интервалы = день
+    group_by = 'ticker',                            # группировка = по аббривиатуре компании
+    auto_adjust = True,                             # по-умолчанию 
+    prepost = True,                                 # по-умолчанию 
+    threads = True,                                 # по-умолчанию 
+    proxy = None                                    # по-умолчанию 
 )
 
 def price_plot(symbol):
@@ -64,7 +67,11 @@ def price_plot(symbol):
     plt.title(symbol, fontweight='bold')
     plt.xlabel('Date', fontweight='bold')
     plt.ylabel('Closing Price', fontweight='bold')
-    return st.pyplot()
+    # ***************************
+    fig, ax = plt.subplots()
+    ax.scatter([1, 2, 3], [1, 2, 3])
+    # ***************************
+    return st.pyplot(fig)
 
 num_company = st.sidebar.slider('Number of Companies', 1, 5)
 
