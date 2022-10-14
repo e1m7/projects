@@ -7,8 +7,11 @@ import base64
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+from PIL import Image
 
 st.title('NFL Football Stats Explorer')
+
+st.image(Image.open('nfl.png'))
 
 st.markdown("""
 This app performs simple webscraping of NFL Football player stats data (focusing on Rushing)
