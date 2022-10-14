@@ -8,6 +8,7 @@ import numpy as np
 import yfinance as yf
 
 st.title('S&P 500 App')
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.markdown("""
 This app retrieves the list of the **S&P 500** (from Wikipedia) and its corresponding **stock closing price** (year-to-date)
