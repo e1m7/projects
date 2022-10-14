@@ -11,9 +11,6 @@ from PIL import Image
 
 st.title('NFL Football Stats Explorer')
 
-image = Image.open('./images/logo.jpg')
-st.image(image, caption='Logo')
-
 st.markdown("""
 This app performs simple webscraping of NFL Football player stats data (focusing on Rushing)
 * **Python libraries:** base64, pandas, streamlit, numpy, matplotlib, seaborn
