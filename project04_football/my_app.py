@@ -11,7 +11,7 @@ from PIL import Image
 
 st.title('NFL Football Stats Explorer')
 
-image = Image.open('nfl.png')
+image = Image.open('logo.jpg')
 st.image(image, caption='Logo')
 
 st.markdown("""
