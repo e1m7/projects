@@ -3,9 +3,6 @@ import streamlit as st
 import pandas as pd
 from sklearn import datasets
 from sklearn.ensemble import RandomForestClassifier
-from PIL import Image
-
-uploaded_file = st.file_uploader("0.jpg")
 
 st.write("""
 # Simple Iris Flower Prediction App
@@ -60,14 +57,3 @@ st.write(prediction[0])
 
 a2.subheader('Probability')
 a2.write(prediction_proba)
-
-bytes_data = uploaded_file.getvalue()
-st.write(bytes_data)
-
-# Вывод рисунка предсказанного цветка
-# if prediction[0] == 0:
-#     a3.image(Image.open('0.jpg'))
-# elif prediction[0] == 1:
-#     a3.image(Image.open('1.jpg'))
-# else:
-#     a3.image(Image.open('2.jpg'))
