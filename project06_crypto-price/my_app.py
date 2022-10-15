@@ -1,6 +1,6 @@
 
 import streamlit as st
-from PIL import Image
+# from PIL import Image
 import pandas as pd
 import base64
 import matplotlib.pyplot as plt
@@ -11,8 +11,8 @@ import time
 
 st.set_page_config(layout="wide")
 
-image = Image.open('logo.jpg')
-st.image(image, width=500)
+# image = Image.open('logo.jpg')
+# st.image(image, width=500)
 
 st.title('Crypto Price App')
 st.markdown("""
