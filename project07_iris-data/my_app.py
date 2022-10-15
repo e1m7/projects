@@ -5,7 +5,7 @@ from sklearn import datasets
 from sklearn.ensemble import RandomForestClassifier
 from PIL import Image
 
-image = Image.open(BytesIO("0.jpg"))
+uploaded_file = st.file_uploader("0.jpg")
 
 st.write("""
 # Simple Iris Flower Prediction App
@@ -61,7 +61,8 @@ st.write(prediction[0])
 a2.subheader('Probability')
 a2.write(prediction_proba)
 
-a3.image(image, caption="Sunrise by the mountains", use_column_width=True)
+bytes_data = uploaded_file.getvalue()
+st.write(bytes_data)
 
 # Вывод рисунка предсказанного цветка
 # if prediction[0] == 0:
