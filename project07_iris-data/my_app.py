@@ -41,11 +41,13 @@ clf.fit(X, Y)
 prediction = clf.predict(df)
 prediction_proba = clf.predict_proba(df)
 
-st.subheader('Class labels and their corresponding index number')
-st.write(iris.target_names)
+a1, a2, a3 = st.columns(3)
 
-st.subheader('Prediction')
-st.write(iris.target_names[prediction])
+a1.subheader('Class labels')
+a1.write(iris.target_names)
 
-st.subheader('Prediction Probability')
-st.write(prediction_proba)
+a2.subheader('Prediction')
+a2.write(iris.target_names[prediction])
+
+a3.subheader('Probability')
+a3.write(prediction_proba)
