@@ -3,6 +3,11 @@ import streamlit as st
 import pandas as pd
 from sklearn import datasets
 from sklearn.ensemble import RandomForestClassifier
+from PIL import Image
+
+image0 = Image.open('0.jpg')
+image1 = Image.open('1.jpg')
+image2 = Image.open('2.jpg')
 
 st.write("""
 # Simple Iris Flower Prediction App
@@ -42,7 +47,7 @@ Y = iris.target
 clf = RandomForestClassifier()
 clf.fit(X, Y)
 
-# Делаем предсказание для пользоательского набора
+# Делаем предсказание для пользовательского набора
 prediction = clf.predict(df)
 prediction_proba = clf.predict_proba(df)
 
@@ -55,5 +60,13 @@ a2.subheader('Prediction')
 a2.write(iris.target_names[prediction])
 st.write(prediction[0])
 
-a3.subheader('Probability')
-a3.write(prediction_proba)
+a2.subheader('Probability')
+a2.write(prediction_proba)
+
+# Вывод рисунка предсказанного цветка
+if prediction[0] == 0:
+    a3.image(image0, caption='Setosa')
+elif prediction[0] == 1:
+    a3.image(image1, caption='Versicolor')
+else:
+    a3.image(image2, caption='Virginica')
