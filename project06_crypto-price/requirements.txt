@@ -2,3 +2,7 @@ streamlit
 pandas
 matplotlib
 Image
+bs4
+requests
+json
+time
