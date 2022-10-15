@@ -5,10 +5,6 @@ from sklearn import datasets
 from sklearn.ensemble import RandomForestClassifier
 from PIL import Image
 
-image0 = Image.open('0.jpg')
-image1 = Image.open('1.jpg')
-image2 = Image.open('2.jpg')
-
 st.write("""
 # Simple Iris Flower Prediction App
 
@@ -65,8 +61,8 @@ a2.write(prediction_proba)
 
 # Вывод рисунка предсказанного цветка
 if prediction[0] == 0:
-    a3.image(image0, caption='Setosa')
+    a3.image(Image.open('0.jpg'))
 elif prediction[0] == 1:
-    a3.image(image1, caption='Versicolor')
+    a3.image(Image.open('1.jpg'))
 else:
-    a3.image(image2, caption='Virginica')
+    a3.image(Image.open('2.jpg'))
