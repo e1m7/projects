@@ -53,7 +53,7 @@ a1.write(iris.target_names)
 
 a2.subheader('Prediction')
 a2.write(iris.target_names[prediction])
-st.write(prediction[0])
+# st.write(prediction[0])
 
-a2.subheader('Probability')
-a2.write(prediction_proba)
+a3.subheader('Probability')
+a3.write(prediction_proba)
