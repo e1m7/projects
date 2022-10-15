@@ -43,11 +43,12 @@ prediction_proba = clf.predict_proba(df)
 
 a1, a2, a3 = st.columns(3)
 
-a1.subheader('Class labels')
+a1.subheader('🌼 Class labels')
 a1.write(iris.target_names)
 
-a2.subheader('Prediction')
+a2.subheader('🌼 Prediction')
 a2.write(iris.target_names[prediction])
+st.write(prediction)
 
-a3.subheader('Probability')
+a3.subheader('🌼 Probability')
 a3.write(prediction_proba)
