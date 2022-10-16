@@ -13,9 +13,18 @@ This app predicts the **Boston House Price**
 """)
 st.write('---')
 
-boston = datasets.load_boston()
-X = pd.DataFrame(boston.data, columns=boston.feature_names)
-Y = pd.DataFrame(boston.target, columns=["MEDV"])
+# 506 записей
+# 14 колонок
+# MEDV = средняя стоимость
+
+# boston = datasets.load_boston()
+data_url = "http://lib.stat.cmu.edu/datasets/boston"
+raw_df = pd.read_csv(data_url, sep="\s+", skiprows=22, header=None)
+data = np.hstack([raw_df.values[::2, :], raw_df.values[1::2, :2]])
+target = raw_df.values[1::2, 2]
+
+X = pd.DataFrame(data, columns=boston.feature_names)
+Y = pd.DataFrame(target, columns=["MEDV"])
 
 st.sidebar.header('Specify Input Parameters')
 
