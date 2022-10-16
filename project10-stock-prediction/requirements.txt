@@ -1,4 +1,0 @@
-streamlit==0.85.1
-fbprophet
-yfinance
-plotly
