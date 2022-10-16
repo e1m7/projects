@@ -24,7 +24,7 @@ raw_df = pd.read_csv(data_url, sep="\s+", skiprows=22, header=None)
 data = np.hstack([raw_df.values[::2, :], raw_df.values[1::2, :2]])
 target = raw_df.values[1::2, 2]
 
-X = pd.DataFrame(data, columns=boston.feature_names)
+X = pd.DataFrame(data, columns=data.feature_names)
 Y = pd.DataFrame(target, columns=["MEDV"])
 
 st.sidebar.header('Specify Input Parameters')
