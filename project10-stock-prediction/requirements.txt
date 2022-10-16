@@ -1,5 +1,5 @@
-streamlit
+streamlit==0.85.1
 datetime
-yfinance
+yfinance==0.1.63
 fbprphet
 plotly
