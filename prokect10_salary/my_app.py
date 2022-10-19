@@ -8,6 +8,9 @@ st.write("""
 salaire de l'employé. Créer un modèle qui, compte tenu de **l'âge** et de **l'expérience**, 
 prédit la valeur **salariale** d'un employé
 
+- [link](https://colab.research.google.com/drive/1k3_KMTVcWO0kPbLFR8--N1AX1Kuh7KMM?usp=sharing)
+- [data](https://drive.google.com/file/d/1WpLIbsVZu_47CwSOBJcjMt0cHqNbVWbR/view?usp=sharing)
+
 ***
 """)
 
