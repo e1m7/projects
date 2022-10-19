@@ -1,6 +1,16 @@
 
 import streamlit as st
 
+st.write("""
+# Prévision du salaire des employés
+
+Étant donné un ensemble de données simple avec des champs : nom, âge, expérience, 
+salaire de l'employé. Créer un modèle qui, compte tenu de **l'âge** et de **l'expérience**, 
+prédit la valeur **salariale** d'un employé
+
+***
+""")
+
 code = '''
 # установить pyspark
 # installer payspark
