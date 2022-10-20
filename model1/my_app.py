@@ -13,6 +13,8 @@ st.title("K-Nearest Neighbor")
 cols = ["fLength", "fWidth", "fSize", "fConc", "fConc1", "fAsym", "fM3Long", "fM3Trans", "fAlpha", "fDist", "class"]
 
 uploaded_file = st.file_uploader("Choose a file")
+st.write("https://archive.ics.uci.edu/ml/machine-learning-databases/magic/magic04.data")
+
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file, names=cols)
 
@@ -72,3 +74,9 @@ number = st.slider('Sélectionnez le nombre de points adjacents', 1, 10, 1)
 st.write("Vous avez choisi ", number, ' nombre de voisins')
 
 knn_model = KNeighborsClassifier(n_neighbors=number)
+knn_model.fit(X_train, y_train)
+y_pred = knn_model.predict(X_test)
+
+result = classification_report(y_test, y_pred)
+st.write("Résultat de la prédiction")
+st.dataframe(result
