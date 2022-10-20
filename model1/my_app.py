@@ -50,6 +50,20 @@ train, X_train, y_train = scale_dataset(train, oversample=True)
 valid, X_valid, y_valid = scale_dataset(valid, oversample=False)
 test, X_test, y_test = scale_dataset(test, oversample=False)
 
+code = """
+def scale_dataset(dataframe, oversample=False):
+    X = dataframe[dataframe.columns[:-1]].values
+    y = dataframe[dataframe.columns[-1]].values
+    scaler = StandardScaler()
+    X = scaler.fit_transform(X)
+    if oversample:
+        ros = RandomOverSampler()
+        X, y = ros.fit_resample(X, y)
+    data = np.hstack((X, np.reshape(y, (-1, 1))))
+    return data, X, y
+"""
+st.code(code, language='python')
+
 st.write("Après avoir aligné les données dans le jeu d'enregistrements de test avec 0 et 1, il est devenu le même nombre")
 st.write("Maintenant dans le jeu de test d'enregistrements **gamma**", 7399)
 st.write("Maintenant, un jeu de test d'enregistrements **gudron**", 7399)
