@@ -51,7 +51,7 @@ valid, X_valid, y_valid = scale_dataset(valid, oversample=False)
 test, X_test, y_test = scale_dataset(test, oversample=False)
 
 st.write("Après avoir aligné les données dans le jeu d'enregistrements de test avec 0 et 1, il est devenu le même nombre")
-st.write("Maintenant dans le jeu de test d'enregistrements **gamma**", 7399))
+st.write("Maintenant dans le jeu de test d'enregistrements **gamma**", 7399)
 st.write("Maintenant, un jeu de test d'enregistrements **gudron**", 7399))
 
 number = st.slider('Sélectionnez le nombre de points adjacents', 1, 10, 1)
