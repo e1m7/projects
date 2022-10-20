@@ -15,10 +15,10 @@ uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file, names=cols)
 
-st.write('Afficher la date d'origine à l'écran')
+st.write("Afficher la date d'origine à l'écran")
 st.dataframe(df.head(3))
 
 df["class"] = (df["class"] == "g").astype(int)
 
-st.write('Dans la Dernière colonne, remplacez les valeurs 'g| / 'h' par 0/1 afin que les modèles puissent les gérer facilement')
+st.write("Dans la Dernière colonne, remplacez les valeurs 'g| / 'h' par 0/1 afin que les modèles puissent les gérer facilement")
 st.dataframe(df.head(3))
