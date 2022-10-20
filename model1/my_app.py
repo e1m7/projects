@@ -81,6 +81,8 @@ y_pred = knn_model.predict(X_test)
 
 result = classification_report(y_test, y_pred, output_dict=True)
 st.header("Résultat de la prédiction")
-st.write(result['0'])
-st.write(result['1'])
+st.write("Précision pour le paramètre **gamma**", result['0'])
+st.write("Précision pour le paramètre **gudron**", result['1'])
+st.write("Précision pour le paramètre **modèle**", result['accuracy'])
+
 
