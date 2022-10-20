@@ -79,4 +79,4 @@ y_pred = knn_model.predict(X_test)
 
 result = classification_report(y_test, y_pred)
 st.write("Résultat de la prédiction")
-st.dataframe(result)
+st.write(result)
