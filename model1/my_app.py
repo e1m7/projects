@@ -7,7 +7,6 @@ from sklearn.preprocessing import StandardScaler
 from imblearn.over_sampling import RandomOverSampler
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import classification_report
-import plotly.figure_factory as ff
 
 st.title("K-Nearest Neighbor")
 cols = ["fLength", "fWidth", "fSize", "fConc", "fConc1", "fAsym", "fM3Long", "fM3Trans", "fAlpha", "fDist", "class"]
@@ -79,7 +78,4 @@ y_pred = knn_model.predict(X_test)
 
 result = classification_report(y_test, y_pred)
 st.header("Résultat de la prédiction")
-# st.table(result)
-# st.dataframe(result)
-result['label 1']
-result['label 2']
+st.write(result)
