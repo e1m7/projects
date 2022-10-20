@@ -78,6 +78,7 @@ knn_model.fit(X_train, y_train)
 y_pred = knn_model.predict(X_test)
 
 result = classification_report(y_test, y_pred)
-st.write("Résultat de la prédiction")
+st.header("Résultat de la prédiction")
 # st.table(result)
-st.dataframe(result)
+# st.dataframe(result)
+result
