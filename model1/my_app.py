@@ -79,8 +79,8 @@ knn_model = KNeighborsClassifier(n_neighbors=number)
 knn_model.fit(X_train, y_train)
 y_pred = knn_model.predict(X_test)
 
-result = classification_report(y_test, y_pred)
+result = classification_report(y_test, y_pred, output_dict=True)
 st.header("Résultat de la prédiction")
-st.write(result)
-st.write("---")
-st.write(classification_report(y_test, y_pred))
+st.write(result[0])
+st.write(result[1])
+
