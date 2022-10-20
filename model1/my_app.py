@@ -25,8 +25,8 @@ st.dataframe(df.head(3))
 
 st.write("Nous déduisons pour 10 caractéristiques graphiques qui montrent comment la distribution de la Dernière colonne est liée (0,1)")
 for label in cols[:-1]:
-    a = (df[df["class"]==1][label], color='blue', label='gamma', alpha=0.7, density=True)
-    b = (df[df["class"]==0][label], color='red', label='hadron', alpha=0.7, density=True)
+    a = df[df["class"]==1][label]
+    b = df[df["class"]==0][label]
     st.write(a)
     st.write(b)
     # arr = np.random.normal(1, 1, size=100)
