@@ -1,4 +1,6 @@
 streamlit==1.5.0
 sklearn
+sklearn.model_selection
+sklearn.feature_extraction.text
 numpy
 pandas
