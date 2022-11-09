@@ -12,6 +12,7 @@ Cet exemple montre comment créer et former cinq modèles d'apprentissage automa
 - [model](https://drive.google.com/file/d/15qL9AXJLdKy8AbNgqncdtuO28IrFlgB4/view?usp=sharing)
 """)
 
+st.write("""
 import random
 import json
 
@@ -195,3 +196,4 @@ with open('./sent_clf.pkl', 'wb') as f:
 
 with open('./sent_clf.pkl', 'rb') as f:
   load_clf = pickle.load(f)
+""")
