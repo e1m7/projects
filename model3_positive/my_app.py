@@ -202,7 +202,7 @@ st.code(code, language='python')
 
 uploaded_file = st.file_uploader("Choose a model")
 
-with open(uploaded_file, 'rb') as f:
-  load_clf = pickle.load(f)
+# with open(uploaded_file, 'rb') as f:
+#   load_clf = pickle.load(f)
 
-st.wtite(load_clf)
+st.wtite(uploaded_file)
