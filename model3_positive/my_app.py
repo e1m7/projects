@@ -1,4 +1,6 @@
 
+import streamlit as st
+
 st.title("The mood of the text")
 
 uploaded_file = st.file_uploader("Choose a file")
