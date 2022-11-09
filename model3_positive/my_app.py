@@ -105,11 +105,11 @@ test_container.evenly_distribute()
 test_x = test_container.get_text()
 test_y = test_container.get_sentiment()
 
-print("\nEnsemble d'entraînement")
+print("Ensemble d'entraînement")
 print(train_y.count(Sentiment.POSITIVE))
 print(train_y.count(Sentiment.NEGATIVE))
 
-print("\nKit de test")
+print("Kit de test")
 print(test_y.count(Sentiment.POSITIVE))
 print(test_y.count(Sentiment.NEGATIVE))
 
