@@ -199,17 +199,3 @@ with open('./sent_clf.pkl', 'rb') as f:
 """
 
 st.code(code, language='python')
-
-uploaded_file = st.file_uploader("Choose a model")
-
-# with open(uploaded_file, 'rb') as f:
-#   load_clf = pickle.load(f)
-
-st.write(uploaded_file)
-
-from sklearn.feature_extraction.text import TfidfVectorizer
-vectorized = TfidfVectorizer()
-
-test_set = ['A wonderful model, everything turned out exactly as I planned!!!']
-new_test = vectorized.transform(test_set)
-clf_svm.predict(new_test)
