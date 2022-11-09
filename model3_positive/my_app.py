@@ -1,7 +1,7 @@
 
 import streamlit as st
 
-st.title("The mood of the text")
+st.title("The sense of the text")
 
 st.write("""
 Cet exemple montre comment créer et former cinq modèles d'apprentissage automatique qui peuvent identifier les émotions d'un texte (négatif, positif). Les données représentent 10.000 critiques du site Amazon
